@@ -1,0 +1,56 @@
+body {
+    overflow: hidden;
+    background: rgb(26, 28, 46);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+.slide {
+    position: relative;
+    margin: 10px;
+    background: url('../img/1.jpg') center/cover no-repeat;
+    padding: 10px;
+    height: 80vh;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    flex: 1;
+    transition: 0.5s ease-in-out;
+    h3 {
+        position: absolute;
+        font-size: 24px;
+        bottom: 20px;
+        left: 20px;
+        opacity: 0;
+    }
+    &.active {
+        flex: 10;
+        h3 {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.4s;
+            color: rgba(89, 255, 0, 0.713);
+            font-weight: bold;
+        }
+    }
+    &.two {
+        background: url('../img/2.jpg') center/cover no-repeat;
+    }
+    &.three {
+        background: url('../img/3.jpg') center/cover no-repeat;
+    }
+    &.four {
+        background: url('../img/4.jpg') top/cover no-repeat;
+    }
+    &.five {
+        background: url('../img/5.jpg') center/cover no-repeat;
+    }
+}
+
+
